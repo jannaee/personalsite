@@ -8,21 +8,22 @@
 		<meta name="description" content="Jannaee's Sandbox" />
 		<meta name="keywords" content="Web Developer, 3D Design, 3D printing, Designer, Front-end Development" />
 		<meta name="author" content="portfolio" />
+		
+		<!-- css styles & favicon -->
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/simpleslider.css" />
+
+		<!-- scripts -->
+		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="js/simpleslider.js"></script><!--Goal rewrite script-->
 
 	</head>
-
 	<body>
 		<div class="container">
 			<header class="clearfix">
 				<span>Jannaee Sick</span>
-				<h1>3D printing - Triumphs and hopes</h1>
+				<h1>A collection of design &amp; web development </h1>
 				<nav>
 					<a href="#" class="bp-icon bp-icon-prev" data-info="previous"><span>Previous</span></a>
 					<a href="index.html" class="bp-icon bp-icon-archive" data-info="homepage"><span>Go home</span></a>
@@ -30,39 +31,87 @@
 				</nav>
 			</header>	
 			<div class="main">
-
 				<ul class="cbp-ig-grid">
+					<li >
+						<a href="#">
+							<span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+							<h3 class="cbp-ig-title">Let's Chat</h3>
+							<span class="cbp-ig-category">where i hangout in the digital world</span>
+						</a>
 
-					<li>
-					<div id="slider"><!--Simple slider from http://codepen.io/zuraizm/pen/vGDHl-->
-						<a href="#" class="control_next">></a>
-						<a href="#" class="control_prev"><</a>
-						<ul>
-							<li><img src="img/raw-model-1.jpg"></li>
-							<li><img src="img/raw-model-2.jpg"></li>
-							<li><img src="img/3d-raro-side-square.jpg"></li>
-							<li><img src="img/3d-raro-square.jpg"></li>
-						</ul>
-					</div>
 					</li>
+				
+				<li class="description-panel">
+						<p>
+							<form id="contactForm" class="mainForm" autocomplete="off">
+								<div class="mainForm-inner">
+									<dl class="questions">
+										<dd>
+											<span><label for="q4">Message?</label></span>
+											<textarea id="q4" name="q4" type="text"></textarea>
+										</dd>								
+									
+										<dd>
+											<span><label for="q1">What's your name?</label></span>
+											<input id="q1" name="q1" type="text" />
+										</dd>
+										<dd>
+											<span><label for="q2">Phone</label></span>
+											<input id="q2" name="q2" type="tel" />
+										</dd>	
+										<dd>
+											<span><label for="q3">Email</label></span>
+											<input id="q3" name="q3" type="text" />
+										</dd>		
+							
+									</dl>
+									<button class="submit" type="submit">Send</button>
+									<div class="controls">
+										<button class="next"></button>
+										<div class="progress"></div>
+										<span class="number">
+											<span class="number-current"></span>
+											<span class="number-total"></span>
+										</span>
+										<span class="error-message"></span>
+									</div>
+								</div>
+								<span class="message"></span>
 
-					<li class="description-panel">
-						<p>Examples of the very first piece of jewelry that I modedled and had printed at
-							<a href="https://www.shapeways.com/designer/jannaee">Shapeways</a>
+							</form>
 						</p>
-					</li>
-					<li>
-
-					</li>
-					<li class="description-panel">					
-						<p><a href="http://mydogisbiggerthanyourdog.files.wordpress.com/2014/02/photo.png">123D </a></p>
-					</li>
-
+				</li>
 				<!--End of description panel div-->					
 				</ul>
 			</div><!--End of main div-->
 		</div>	<!--End of container div-->
 
-	
+	<!-- Script provided from coDrops tutorial https://raw.githubusercontent.com/codrops/MinimalForm/master/index.html -->
+	<script src="js/classie.js"></script>
+	<script src="js/stepsform.js"></script>		
+	<script>
+			var contactForm = document.getElementById( 'contactForm' );
+
+			new stepsForm( contactForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( contactForm.querySelector( '.mainForm-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+
+					<!--Jannaee to do: have script go to google docs form: https://wiki.base22.com/pages/viewpage.action?pageId=72942000-->
+					*/
+
+					// let's just simulate something...
+					var messageEl = contactForm.querySelector( '.message' );
+					messageEl.innerHTML = 'Thank you for your interest.<br /> I will be in touch with you soon.';
+					classie.addClass( messageEl, 'show' );
+				}
+			} );
+		</script>
+
 	</body>
 </html>
