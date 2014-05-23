@@ -46,6 +46,11 @@ body {
     min-width: 420px;
 }
 
+textarea{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #272F32;
+}
+
 a {
 	color: #f0f0f0;
 	text-decoration: none;
