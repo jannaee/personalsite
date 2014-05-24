@@ -51,6 +51,7 @@ textarea{
     color: #272F32;
 }
 
+
 a {
 	color: #f0f0f0;
 	text-decoration: none;
@@ -123,8 +124,12 @@ a:hover {
 .container > header nav {
 	float: right;
 	text-align: center;
+	width: 30%;
 }
 
+.intro {
+	width: 60%;
+}
 .container > header nav a {
 	display: inline-block;
 	position: relative;
