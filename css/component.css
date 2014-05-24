@@ -263,17 +263,13 @@ li.description-panel{
 
 .descriptionImg{ width: 100%}
 
-.hiddenStuff{
-	display: none;
-}
-
 
 /********************************
 	Section 4: Contact Form 
 *********************************/
 .mainForm {
 	position: relative;
-	top: -20px;
+	top: -45px;
 	margin: 0 auto;
 	padding: 2em 0;
 	max-width: 860px;
@@ -429,17 +425,18 @@ li.description-panel{
 }
 
 .next::after {
+/*  styling for this is covered in default.css 
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	content: "\e01a";
+	height: 100%;*/
+	content: "\e000";
 	text-transform: none;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	font-family: 'icomoon';
+	font-family: 'bpicons';
 	line-height: 2;
 	speak: none;
 	-webkit-font-smoothing: antialiased;

@@ -8,22 +8,59 @@
 		<meta name="description" content="Jannaee's Sandbox" />
 		<meta name="keywords" content="Web Developer, 3D Design, 3D printing, Designer, Front-end Development" />
 		<meta name="author" content="portfolio" />
+
+		<!-- css styles & favicon -->
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<!-- scripts -->
+		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span>Jannaee Sick</span>
-				<h1>A collection of design &amp; web development </h1>
-				<!--<nav>
-					<a href="#" class="bp-icon bp-icon-prev" data-info="previous"><span>Previous Blueprint</span></a>
-					<a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a>
-					<a href="" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
-					<a href="" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the archive</span></a>
-				</nav>-->
+				<div class="intro">
+					<h3>Jannaee Sick</h3>
+					<h1>A collection of design &amp; web development </h1>
+				</div>
+				 <nav>
+					<form id="contactForm" class="mainForm" autocomplete="off">
+						<div class="mainForm-inner">
+							<dl class="questions">
+								<dd>
+									<span><label for="q1">&nbsp;</label></span>
+									<input id="q1" name="q1" type="text" placeholder="Wanna chat? Leave yo name." />
+								</dd>
+								<dd>
+									<span><label for="q2">&nbsp;</label></span>
+									<!--<span><label for="q2">Phone</label></span>-->				
+									<input id="q2" name="q2" type="text" placeholder="What's your number?" />
+								</dd>	
+								<dd>
+									<span><label for="q3">&nbsp;</label></span>
+									<input id="q3" name="q3" type="text" placeholder="Email?"/>
+								</dd>		
+								<dd>
+									<span><label for="q4">&nbsp;</label></span>
+									<textarea id="q4" name="q4" type="text" placeholder="Message?"></textarea>
+								</dd>	
+							</dl>
+							<button class="submit" type="submit">Send</button>
+							<div class="controls">
+								<button class="bp-icon bp-icon-next next"></button>
+								<div class="progress"></div>
+								<span class="number">
+									<span class="number-current"></span>
+									<span class="number-total"></span>
+								</span>
+								<span class="error-message"></span>
+							</div>
+						</div>
+						<span class="message"></span>
+					</form>
+				</nav>	
 			</header>	
 			<div class="main">
 				<ul class="cbp-ig-grid">
@@ -74,5 +111,34 @@
 				</ul>
 			</div>
 		</div>
+
+	<!-- Script provided from coDrops tutorial https://raw.githubusercontent.com/codrops/MinimalForm/master/index.html -->
+	<script src="js/classie.js"></script>
+	<script src="js/stepsform.js"></script>	
+	<script>
+		var contactForm = document.getElementById( 'contactForm' );
+			new stepsForm( contactForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( contactForm.querySelector( '.mainForm-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+
+					<!--Jannaee to do: have script go to google docs form: https://wiki.base22.com/pages/viewpage.action?pageId=72942000-->
+
+					https://docs.google.com/spreadsheets/d/15w2DbaKQg0zXHXIYW42_g85XiYvMrSUyqKDwRQsdgHs/edit#gid=0
+					*/
+
+					// let's just simulate something...
+					var messageEl = contactForm.querySelector( '.message' );
+					messageEl.innerHTML = 'Thank you for your interest.<br /> I\'ll be in touch.<br /> <button>Refresh</button';
+					classie.addClass( messageEl, 'show' );
+				}
+			});
+
+	</script>
 	</body>
 </html>
