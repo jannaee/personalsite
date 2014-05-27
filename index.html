@@ -17,6 +17,7 @@
 		<!-- scripts -->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
+
 	</head>
 	<body>
 		<div class="container">
@@ -115,30 +116,6 @@
 	<!-- Script provided from coDrops tutorial https://raw.githubusercontent.com/codrops/MinimalForm/master/index.html -->
 	<script src="js/classie.js"></script>
 	<script src="js/stepsform.js"></script>	
-	<script>
-		var contactForm = document.getElementById( 'contactForm' );
-			new stepsForm( contactForm, {
-				onSubmit : function( form ) {
-					// hide form
-					classie.addClass( contactForm.querySelector( '.mainForm-inner' ), 'hide' );
-
-					/*
-					form.submit()
-					or
-					AJAX request (maybe show loading indicator while we don't have an answer..)
-
-					<!--Jannaee to do: have script go to google docs form: https://wiki.base22.com/pages/viewpage.action?pageId=72942000-->
-
-					https://docs.google.com/spreadsheets/d/15w2DbaKQg0zXHXIYW42_g85XiYvMrSUyqKDwRQsdgHs/edit#gid=0
-					*/
-
-					// let's just simulate something...
-					var messageEl = contactForm.querySelector( '.message' );
-					messageEl.innerHTML = 'Thank you for your interest.<br /> I\'ll be in touch.<br /> <button>Refresh</button';
-					classie.addClass( messageEl, 'show' );
-				}
-			});
-
-	</script>
+	<script src="js/custom.js"></script>
 	</body>
 </html>
